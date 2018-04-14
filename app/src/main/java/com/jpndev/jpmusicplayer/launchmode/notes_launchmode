@@ -1,0 +1,89 @@
+
+
+4 types
+
+  Standard, SIngleTop,SingleTask, SingleInstance
+
+
+  Standard  :
+             normal .
+
+  SingleTop ;
+   In this launch mode if an instance of activity already exists at the top of the current task, a new instance will not be created and Android system will route the intent information through onNewIntent().
+   If an instance is not present on top of task then new instance will be created.
+
+    Eg : A,B, C (is SingleTop) .D
+
+      A-->B --> C --> C not create C again. (edit text value will be there).
+
+      A-->B--->C--->D--->C  create new C. not use existing c.
+
+  SingleTask
+
+      If an instance of activity exists on the separate task, a new instance will not be created and Android system routes the intent information through onNewIntent() method.
+      At a time only one instance of activity will exist.
+
+ Eg : A,B, C (is SingleTask) .D,E
+
+      A-->B --> C --> C not create C again. (edit text value will be there).
+
+      A-->B--->C--->D-->E--->C = (A-->B-->C) use existing C .
+
+      Note: D and E activities get destroyed here.
+
+   SIngleInstance
+
+     This is very special launch mode and only used in the applications that has only one activity.
+     It is similar to singleTask except that no other activities will be created in the same task.
+     Any other activity started from here will create in a new task.
+
+
+ Eg : A,B, C (is SingleInstance) .D,E
+
+      A-->B --> C --> C not create C again. (edit text value will be there).
+
+      task 1) A-->B
+      task 2) C
+
+      A-->B--->C--->D-->E--->C = use existing C in separate task
+     task 1) A-->B-->D-->E
+     task 2) C
+
+     Note: D and E activities not destroyed here. and sepeate animation for C task.
+
+    test case  onbackpress
+
+      1)A-->B-->C-->D-->E-->C--D-->E
+
+      backpress order
+       D,E,D,B,A--> C last
+
+     2) A-->B-->C-->D-->E-->C--D-->E-->C
+
+         backpress Order
+          C,-->   D,E,D,B,A
+
+
+
+
+TestCase 1:
+
+  <fragment
+        android:layout_width="match_parent"
+        class="com.jpndev.jpmusicplayer.asyntask.AsynTaskFragment"
+        android:layout_height="match_parent"/>
+
+
+
+
+
+
+Output
+  *crash
+  * Caused by: java.lang.IllegalArgumentException: Binary XML file line #0: Must specify unique android:id, android:tag, o
+  *fragment need unique id
+
+
+  java.lang.ClassCastException :     support.v4.app, and app -
+
+  java.lang.IllegalStateException:  -  onClick in xml. (activty is root)

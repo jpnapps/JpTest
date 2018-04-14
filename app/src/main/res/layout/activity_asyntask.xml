@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/top_llay"
+   >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:minHeight="20dip"
+            android:maxHeight="20dip"
+            android:visibility="gone"
+            android:layout_margin="20dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.ProgressBar.Horizontal"/>
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            android:minHeight="20dip"
+            android:maxHeight="20dip"
+            android:visibility="gone"
+            android:layout_margin="20dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.ProgressBar.Horizontal"/>
+        <TextView
+            android:id="@+id/asyntask_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asyn"
+            android:textSize="25sp"
+            android:padding="20dp"
+            android:layout_margin="20dp"
+            android:onClick="onClick"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimaryDark"
+    />
+        <TextView
+            android:id="@+id/home_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textSize="25sp"
+            android:padding="20dp"
+            android:layout_margin="20dp"
+            android:onClick="onClick"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimaryDark"
+            />
+    <!--    <EditText
+            android:id="@+id/edt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="enter"
+            android:textSize="25sp"
+
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimaryDark"
+            />-->
+        <TextView
+            android:id="@+id/progress_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Progress"
+            android:textSize="25sp"
+            android:maxLines="5"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:background="@color/red"
+    />
+        <TextView
+            android:id="@+id/progress2_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Progress 2"
+            android:textSize="25sp"
+            android:maxLines="5"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:background="@color/red"
+            />
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
