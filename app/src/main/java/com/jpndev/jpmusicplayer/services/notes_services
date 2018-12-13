@@ -1,0 +1,17 @@
+
+
+service life cycle methods
+
+1.onCreate
+2.onDestroy
+  this to clean up any resources such as threads, registered listeners, receivers, etc.
+3.onStartCommand(intent: Intent?, flags: Int, startId: Int): Int
+  - system calls this,,by calling startService()
+  - If you implement this method, it is your responsibility to stop the service when its work is done, by calling stopSelf() or stopService() methods.
+4.onBind(intent: Intent?): IBinder
+  - system calls this,by calling bindService().
+  - must overrided(j)
+5.onUnbind(intent: Intent?): Boolean
+  -system calls this, when all clients have disconnected from a particular interface published by the service.
+6.onRebind(intent: Intent?)
+  -system calls this,when new clients have connected to the service, after it had previously been notified that all had disconnected in its onUnbind(Intent).

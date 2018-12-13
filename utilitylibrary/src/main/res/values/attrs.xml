@@ -60,7 +60,7 @@
     <declare-styleable name="DeviceFitTextView">
       <attr name="percentage_width" format="integer"/>
       <attr name="percentage_height" format="integer"/>
-        <attr name="font" format="string" />
+        <attr name="fontName" format="string" />
         <attr name="isAuroResize" format="boolean" />
    </declare-styleable>
 

@@ -68,7 +68,7 @@ Test Case 3
    *crash.
    *java.lang.RuntimeException: Can't toast on a thread that has not called Looper.prepare()
 
-   Note : debug will work in doInBackground.
+   Note : debug and text will work in doInBackground.
 
 
 Test case 4

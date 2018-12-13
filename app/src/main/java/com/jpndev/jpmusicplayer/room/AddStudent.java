@@ -11,17 +11,14 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RadioButton;
 import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class AddStudent extends AppCompatActivity {
@@ -31,12 +28,12 @@ public class AddStudent extends AppCompatActivity {
     String studentid;
     EditText etid,etname,etaddress;
     String gender;
-    ArrayList<String> location ;
+   // ArrayList<String> lo cation ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_student);
+       /* setContentView(R.layout.activity_add_student);
 
         imageView1 = (ImageView) findViewById(R.id.imageViewpostimage1);
         imageView2 = (ImageView) findViewById(R.id.imageViewpostimage2);
@@ -46,10 +43,10 @@ public class AddStudent extends AppCompatActivity {
 
         etname=(EditText) findViewById(R.id.etname);
 
-        etaddress=(EditText) findViewById(R.id.etaddress);
+        etaddress=(EditText) findViewById(R.id.etaddress);*/
     }
 
-    public void onRadioButtonClicked(View view) {
+/*    public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
 
@@ -87,7 +84,7 @@ public class AddStudent extends AppCompatActivity {
                 break;
             // TODO: Veggie sandwich
         }
-    }
+    }*/
 
     public void dosavestudent(View view) {
 
@@ -99,14 +96,14 @@ public class AddStudent extends AppCompatActivity {
         String name= etname.getText().toString().trim();
         String address=etaddress.getText().toString().trim();
         String location1;
-        location1=location.get(0);
+      //  location1=location.get(0);
 
         Student student = new Student();
         student.setId(id);
         student.setName(name);
         student.setAddress(address);
         student.setGender(gender);
-        student.setLocation(location1);
+       // student.setLocation(location1);
 
         MainActivity.appDatabase.studentDao().addstudent(student);
         Toast.makeText(this, " Student added", Toast.LENGTH_SHORT).show();
@@ -146,7 +143,7 @@ public class AddStudent extends AppCompatActivity {
             String name= etname.getText().toString().trim();
             String address=etaddress.getText().toString().trim();
             String location1;
-            location1=location.get(0);
+           // location1=location.get(0);
 
             byte[] data = convertImageToByte(filePath);
 
@@ -155,7 +152,7 @@ public class AddStudent extends AppCompatActivity {
             student.setName(name);
             student.setAddress(address);
             student.setGender(gender);
-            student.setLocation(location1);
+         //   student.setLocation(location1);
             Toast.makeText(this, "data ="+ Arrays.toString(data), Toast.LENGTH_SHORT).show();
 /*
             Bitmap photo = (Bitmap) "your Bitmap image";

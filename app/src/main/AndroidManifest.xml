@@ -52,13 +52,11 @@
         </activity>
         <activity android:name=".HomeActivity">
 
-            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            -->
         </activity>
         <activity
             android:name=".HomeCActivity"
@@ -87,11 +85,11 @@
             android:label="@string/title_activity_kotline_u"
             android:launchMode="standard"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
+       <!--     <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
 
         <!-- android:launchMode="singleTask" -->
@@ -121,15 +119,35 @@
             android:name=".demoitem.ItemActivity"
             android:label="@string/title_activity_item"
             android:theme="@style/AppTheme.NoActionBar">
+
+            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            -->
         </activity>
         <activity
             android:name=".demoitem.ItemUploadActivity"
             android:label="@string/title_activity_item_upload"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".roomdemo.ItemListActivity"
+            android:label="@string/title_activity_item"
+            android:theme="@style/AppTheme.NoActionBar">
+           <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".roomdemo.AddItemActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".interaction.InteractionActivity"
+            android:label="@string/title_activity_interaction"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

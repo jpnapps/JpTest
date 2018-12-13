@@ -59,7 +59,7 @@ public class TypefaceManager {
         TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.DeviceFitTextView, 0, 0);
 
         try {
-            String font = a.getString(R.styleable.DeviceFitTextView_font);
+            String font = a.getString(R.styleable.DeviceFitTextView_fontName);
             if (font != null) {
                 Typeface typeface = TypefaceManager.getTypeface(context,  font);
                 if (typeface != null) {

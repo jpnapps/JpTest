@@ -81,4 +81,9 @@
     <string name="title_activity_kotline_u">KotlineActivityU</string>
     <string name="title_activity_item">ItemActivity</string>
     <string name="title_activity_item_upload">ItemUploadActivity</string>
+    <string name="title_activity_interaction">InteractionActivity</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
